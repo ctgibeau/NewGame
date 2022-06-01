@@ -1,0 +1,29 @@
+{
+  "name": "newgameplus",
+  "version": "1.0.0",
+  "description": "A storefront demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ctgibeau/NewGame.git"
+  },
+  "keywords": [
+    "Store"
+  ],
+  "author": "Christopher Gibeau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ctgibeau/NewGame/issues"
+  },
+  "homepage": "https://github.com/ctgibeau/NewGame#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.4",
+    "nodemon": "^2.0.16"
+  }
+}
