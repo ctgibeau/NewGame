@@ -4,6 +4,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 
 const mongoString = process.env.DATABASE_URL
 
@@ -25,6 +26,7 @@ const app = express();
 require("./src/startup/routes")(app);
 app.use(cookieParser());
 app.use(express.json());
+app.use(cors());
 
 /*
 app.get("/api", (req, res) => {

@@ -41,9 +41,19 @@ router.get('/item', async (req, res) => {
 })
 
 //Get by ID Method
-router.get('/get/item/:id', async (req, res) => {
+router.get('/item/:id', async (req, res) => {
     try{
         const data = await Model.findById(req.params.id);
+        res.json(data)
+    }
+    catch(error){
+        res.status(500).json({message: error.message})
+    }
+})
+
+router.get('/boxset', async (req, res) => {
+    try{
+        const data = await Model.find({ boxset: '*'});
         res.json(data)
     }
     catch(error){
