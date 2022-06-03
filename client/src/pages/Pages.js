@@ -4,14 +4,17 @@ import Home from './Home'
 import Store from './Store'
 import Contact from './Contact'
 import Item  from './Item'
+import Cart from './Cart'
 
-export default function Pages() {
+export default function Pages(props) {
     return (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/store" element={<Store />} />
-          <Route path="/cart" element={<Store />} />
+          <Route path="/store" element={<Store
+            handleClick = {props.handleClick}
+          />} />
+          <Route path="/cart" element={<Cart cart = {props.cart} />} />
           <Route path="/item/:itemId" element={<Item />} />
         </Routes>
     )
