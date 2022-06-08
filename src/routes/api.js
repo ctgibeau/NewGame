@@ -17,7 +17,7 @@ router.post('/item', async (req, res) => {
         rarity: req.body.rarity,
         price: req.body.price,
         description: req.body.description,
-        quantity: req.body.quantity,
+        stock: req.body.stock,
         boxset: req.body.boxset
     })
 

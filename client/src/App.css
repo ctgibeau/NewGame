@@ -5,6 +5,7 @@
   --accent-color-blue-dim: rgba(36,211,251, .1);
   --accent-color-red: rgba(252,132,132,.5);
   --invert-white: invert(59%) sepia(92%) saturate(941%) hue-rotate(159deg) brightness(107%) contrast(97%);
+  --invert-red: invert(86%) sepia(37%) saturate(4836%) hue-rotate(308deg) brightness(106%) contrast(97%);
   --text-color: rgba(255,255,255,.8);
 }
 
@@ -55,6 +56,10 @@ a:hover {
 
 .invert {
   filter: var(--invert-white);
+}
+
+.invert-red {
+  filter: var(--invert-red);
 }
 
 .app--nav {
@@ -153,8 +158,6 @@ a:hover {
 
 /* Cart List */
 
-
-
 .cart-list-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -169,4 +172,19 @@ a:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.cart-btn-remove {
+  background-color: rgba(255,255,255);
+  background: none;
+  border: none;
+}
+
+.icon-remove {
+  filter: var(--invert-white);
+}
+
+.cart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

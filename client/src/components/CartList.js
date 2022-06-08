@@ -1,7 +1,12 @@
 import React from "react"
-import cartIcon from '../images/bxs-cart.svg'
 
 export default function Cart(props) {
+
+    const options = []
+    for(let i = 0; i <= props.stock; i++) {
+        options.push(<option key={i} value={i}>{i}</option>)
+    }
+    
     return (
         <div className="cart-list-item">
             <div className="cart-item-details">
@@ -9,9 +14,13 @@ export default function Cart(props) {
                 <h2 className="card--header">{props.title}</h2>
             </div>
             <div className="cart-stats">
+                <label htmlFor="quantity">Quantity:</label>
+                <select name="quantity" value={props.quantity} onChange={(event => props.handleChange(event, props._id))}>
+                    {options}
+                </select>
                 <span className="card--price">{`$${props.price}`}</span>
                 <span className="button-container">
-                <button className="button btn-cart" onClick={(event) => props.handleClick(event, props._id)}><img className="icon--cart" src={cartIcon} alt="Add to Cart"/></button>
+                <button className="cart-btn-remove" onClick={(event) => props.handleClick(event, props._id)}>Remove</button>
             </span>
             </div>
         

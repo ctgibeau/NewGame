@@ -14,8 +14,12 @@ export default function Pages(props) {
           <Route path="/store" element={<Store
             handleClick = {props.handleClick}
           />} />
-          <Route path="/cart" element={<Cart cart = {props.cart} />} />
-          <Route path="/item/:itemId" element={<Item />} />
+          <Route path="/cart" element={<Cart 
+          cart = {props.cart}
+          handleClick = {props.handleClick}
+          handleChange = {props.handleChange}
+          />} />
+          <Route path="store/item/:id" element={<Item />} />
         </Routes>
     )
 }
